@@ -1,0 +1,28 @@
+{
+  "name": "homes.com",
+  "version": "1.0.0",
+  "description": "parsing different data files into one database",
+  "main": "Homes.com",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Havamere/Homes.com.git"
+  },
+  "keywords": [
+    "back-end",
+    "large",
+    "data",
+    "javascript"
+  ],
+  "author": "Kyle Rinehart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Havamere/Homes.com/issues"
+  },
+  "homepage": "https://github.com/Havamere/Homes.com#readme",
+  "dependencies": {
+    "xml2js": "^0.4.19"
+  }
+}
