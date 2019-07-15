@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Havamere/Homes.com#readme",
   "dependencies": {
+    "sqlite3": "^4.0.9",
     "xml2js": "^0.4.19"
   }
 }
