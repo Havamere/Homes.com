@@ -36,7 +36,7 @@ var dataXML2 = parseString(data.passXML(), { explicitArray : false, ignoreAttrs 
 // console.log(dataXMLtoJSON);
 
 
-exports.passXMLtoJSON = function() {
+exports.passXMLtoJSONdata = function() {
   return dataXMLtoJSON
 }
 //Initial code provided by github user Will Rayner and their gihub page https://gist.github.com/penguinboy/762197 titled: https://gist.github.com/penguinboy/762197
@@ -61,20 +61,20 @@ function flattenObject(obj) {
 };
 
 var dataCSVagentstoJSON = csvJSON(data.passCSVagents().toString(), "agent");
-exports.passCSVagentstoJSON = function() {
+exports.passCSVagentstoJSONdata = function() {
   return dataCSVagentstoJSON
 }
 var dataCSVlistingstoJSON = csvJSON(data.passCSVlistings().toString(), "listing");
-exports.passCSVlistingstoJSON = function() {
+exports.passCSVlistingstoJSONdata = function() {
   return dataCSVlistingstoJSON
 }
 var dataCSVofficestoJSON = csvJSON(data.passCSVoffices().toString(), 'office');
-exports.passXML = function() {
+exports.passCSVofficestoJSONdata = function() {
   return dataCSVofficestoJSON
 }
 // console.log(dataCSVagentstoJSON);
 // console.log(dataCSVlistingstoJSON);
-console.log(dataCSVofficestoJSON);
+// console.log(dataCSVofficestoJSON);
 
 
 //Initial code provided by github user iwek and their gihub page https://gist.github.com/iwek/7154578 titled: iwek/csv-to-json.js
@@ -83,9 +83,7 @@ console.log(dataCSVofficestoJSON);
 function csvJSON(csv,title){
 
   var lines=csv.split("\r");
-
   var result = [];
-
   var headers=lines[0].toLowerCase().replace(/(\r\n|\n|\r|\")/gm,"").split(",");
 
   for (var i=0; i < headers.length; i++) {
@@ -93,12 +91,7 @@ function csvJSON(csv,title){
       headers[i] = title+"_"+headers[i];
     }
   }
-
   // console.log(lines);
-
-  for (var i=0; i<lines.length; i++) {
-
-  }
 
   for (var i=1; i<lines.length-1; i++) { //-1 is a hack until if statement works properly
 	  var obj = {};
@@ -116,5 +109,3 @@ function csvJSON(csv,title){
 }
 
 //All data at this point should be in similar style JSON objects.
-
-//"NAME","OFFICE_CODE","PHONE","CITY","STATE","ZIP"/,/"MLS_NUMBER","ADDRESS","CITY","STATE","ZIP","PRICE","STATUS","TYPE","AGENT_CODE","OFFICE_CODE","DESC"/,/"NAME","OFFICE_CODE","PHONE","CITY","STATE","ZIP"

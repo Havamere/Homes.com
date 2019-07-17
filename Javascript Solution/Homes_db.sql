@@ -22,8 +22,8 @@ CREATE TABLE Home (
 
 CREATE TABLE Agent (
 
-	agent_code VARCHAR(100) NOT NULL,
   agent_name VARCHAR(100),
+	agent_code VARCHAR(100) NOT NULL,
   office_code VARCHAR(100) NOT NULL,
   agent_phone VARCHAR(100),
   agent_city VARCHAR(100),
